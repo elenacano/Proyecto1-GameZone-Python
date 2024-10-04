@@ -1,4 +1,5 @@
-# 🎮 Proyecto1-Juegos-Python: Desarrollo de Videojuegos Clásicos en Python
+# 🎮 Proyecto1-Juegos-Python
+# Desarrollo de Videojuegos Clásicos en Python
 
 Bienvenidos a mi primer proyecto de desarrollo de videojuegos 🎉. El objetivo es aplicar y demostrar los conocimientos de programación para construir estos juegos interactivos.
 
