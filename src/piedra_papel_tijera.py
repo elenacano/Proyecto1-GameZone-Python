@@ -95,55 +95,67 @@ class juagada_ppt():
 
 
 def inicio_ppt():
-    print("\nBuenas, bienvenido al juego PIEDRA, PAPEL, TIJERA, eliga modalidad de juego")
-    print("1-Clásico")
-    print("2-Piedra, papel, tijera, lagarto, spoke")
+    while True:
 
-    try:
-        opcion = 0
-        num_rondas = 2
-        jugada = juagada_ppt()
+        print("\nBuenas, bienvenido al juego PIEDRA, PAPEL, TIJERA, eliga modalidad de juego")
+        print("1-Clásico")
+        print("2-Piedra, papel, tijera, lagarto, spoke")
 
-        # Le pedimo un número hasta que introduzca 1 o 2
-        while True:
-            opcion = int(input("Seleccione la opción deseada: "))
-            if opcion != 1 and opcion !=2:
-                print("\nPor favor seleccione 1 o 2.")
-            else:
-                break
-        
-        # Si estamos jugando con lagarto y spock lo añade a las opciones
-        jugada.revisar_opciones_permitidas(opcion)
+        try:
+            opcion = 0
+            num_rondas = 2
+            jugada = juagada_ppt()
 
-        while jugada.get_rondas() != num_rondas:
-            opciones_tirada = jugada.opciones_permitidas
-            opciones_tirada_string = ', '.join(map(str, opciones_tirada))
-            
-
+            # Le pedimo un número hasta que introduzca 1 o 2
             while True:
-                seleccion_usuario = input(f'\nEscriba su elección entre: {opciones_tirada_string} -> ')
-                seleccion_usuario = seleccion_usuario.strip().lower()
-                es_correcto = jugada.comprobar_seleccion(seleccion_usuario)
-                if es_correcto:
+                opcion = int(input("Seleccione la opción deseada: "))
+                if opcion != 1 and opcion !=2:
+                    print("\nPor favor seleccione 1 o 2.")
+                else:
                     break
             
-            seleccion_maquina = jugada.generar_opcion_maquina()
-            print(f'La maquina ha elegido: {seleccion_maquina}')
+            # Si estamos jugando con lagarto y spock lo añade a las opciones
+            jugada.revisar_opciones_permitidas(opcion)
 
-            jugada.batalla(seleccion_usuario, seleccion_maquina)
-            jugada.incrementar_rondas()
+            while jugada.get_rondas() != num_rondas:
+                opciones_tirada = jugada.opciones_permitidas
+                opciones_tirada_string = ', '.join(map(str, opciones_tirada))
+                
 
-        print("\n LA PARTIDA HA TERMINADO")
-        print(f'Tus puntos: {jugada.victorias_jugador}')
-        print(f'Puntos de la máquina: {jugada.victorias_maquina}')
-        jugada.ganador()
+                while True:
+                    seleccion_usuario = input(f'\nEscriba su elección entre: {opciones_tirada_string} -> ')
+                    seleccion_usuario = seleccion_usuario.strip().lower()
+                    es_correcto = jugada.comprobar_seleccion(seleccion_usuario)
+                    if es_correcto:
+                        break
+                
+                seleccion_maquina = jugada.generar_opcion_maquina()
+                print(f'La maquina ha elegido: {seleccion_maquina}')
 
-        return
+                jugada.batalla(seleccion_usuario, seleccion_maquina)
+                jugada.incrementar_rondas()
+
+            print("\nLA PARTIDA HA TERMINADO")
+            print(f'Tus puntos: {jugada.victorias_jugador}')
+            print(f'Puntos de la máquina: {jugada.victorias_maquina}')
+            jugada.ganador()
+
+            seleccion_final = 0
+            while True:
+                try:
+                    seleccion_final = int(input("\nPulse: \n 1-Si desea volver a jugar \n 2-Si desea volver al menu principal \n 3-Si desea salir\n Su opción: "))
+                    if seleccion_final == 1:
+                        break
+                    elif seleccion_final == 2 or seleccion_final == 3:
+                        return seleccion_final
+                except ValueError:
+                    print("\nPor favor seleccione 1,2 o 3.")
+    
+        except ValueError:
+            print("\nPor favor seleccione 1 o 2.")
 
 
-    except ValueError:
-        print("\nPor favor seleccione 1 o 2.")
-        inicio_ppt()
+    
 
 # -------------------------------------BORRAR------------------------------------
 if __name__ == "__main__":
