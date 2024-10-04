@@ -153,10 +153,3 @@ def inicio_ppt():
     
         except ValueError:
             print("\nPor favor seleccione 1 o 2.")
-
-
-    
-
-# -------------------------------------BORRAR------------------------------------
-if __name__ == "__main__":
-    inicio_ppt()
