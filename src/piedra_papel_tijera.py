@@ -1,4 +1,5 @@
-import random 
+import random
+from src import auxiliar
 
 class juagada_ppt():
     def __init__(self, ):
@@ -93,13 +94,39 @@ class juagada_ppt():
             print("HA HABIDO UN EMPATE 💩​")
 
 
+import time
+
+def imprimir_bienvenida():
+    print("\n")
+    print("╔═══════════════════════════════════════════════════════╗")
+    print("║        PIEDRA - PAPEL - TIJERA - LAGARTO - SPOCK      ║")
+    print("╚═══════════════════════════════════════════════════════╝")
+    print("\n           ¡Bienvenido a la Batalla Definitiva!          ")
+    print("\n")
+    print("       ⭐  Prepárate para un duelo de lógica y suerte ⭐   ")
+    print("\n")
+
+
+    print("╔════════════════════════════════════════════════════════╗")
+    print("║  REGLAS DEL JUEGO:                                     ║")
+    print("║  🪨 Piedra aplasta Tijera y Lagarto                     ║")
+    print("║  ✋ Papel envuelve Piedra y refuta Spock               ║")
+    print("║  ✂️  Tijera corta Papel y decapita Lagarto              ║")
+    print("║  🦎 Lagarto envenena Spock y devora Papel              ║")
+    print("║  🖖 Spock vaporiza Piedra y rompe Tijera               ║")
+    print("╚════════════════════════════════════════════════════════╝")
+
+    print("-------------------------------------------------------")
+    print("                 ELIJE TU MODO DE JUEGO              ")
+    print("-------------------------------------------------------")
+    print("   1️⃣  Clásico (Piedra, Papel, Tijera)                ")
+    print("   2️⃣  Extendido (Piedra, Papel, Tijera, Lagarto, Spock) ")
+    print("-------------------------------------------------------")
+
 
 def inicio_ppt():
     while True:
-
-        print("\nBuenas, bienvenido al juego PIEDRA, PAPEL, TIJERA, eliga modalidad de juego")
-        print("1-Clásico")
-        print("2-Piedra, papel, tijera, lagarto, spoke")
+        imprimir_bienvenida()
 
         try:
             opcion = 0
@@ -143,7 +170,7 @@ def inicio_ppt():
             seleccion_final = 0
             while True:
                 try:
-                    seleccion_final = int(input("\nPulse: \n 1-Si desea volver a jugar \n 2-Si desea volver al menu principal \n 3-Si desea salir\n Su opción: "))
+                    seleccion_final = auxiliar.mostrar_final_juego()
                     if seleccion_final == 1:
                         break
                     elif seleccion_final == 2 or seleccion_final == 3:
