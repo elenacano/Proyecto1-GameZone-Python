@@ -94,8 +94,6 @@ class juagada_ppt():
             print("HA HABIDO UN EMPATE 💩​")
 
 
-import time
-
 def imprimir_bienvenida():
     print("\n")
     print("╔═══════════════════════════════════════════════════════╗")

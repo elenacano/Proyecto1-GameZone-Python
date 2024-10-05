@@ -1,5 +1,5 @@
 from src import piedra_papel_tijera as ppt
-from src import ahorcado
+from src import ahorcado, tres_en_raya
 
 
 def mostrar_menu():
@@ -40,6 +40,10 @@ def main():
 
             elif juego_seleccionado == 2:
                 seleccion = ahorcado.inicio_ahorcado()
+
+            elif juego_seleccionado == 4:
+                seleccion = tres_en_raya.inicio_tres_raya()
+
 
             else:
                 print("\nPor favor ingrese un número entre 1 y 5.")

@@ -59,5 +59,5 @@ def mostrar_final_juego():
     print("   2. Volver al menú principal")
     print("   3. Salir")
     seleccion_final = int(input("👉 Tu opción: "))
-    print("═════════════════════════════════════")
+    print("═════════════════════════════════════\n")
     return seleccion_final
