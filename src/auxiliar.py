@@ -1,6 +1,11 @@
 import random
 
 def selecccion_palabra():
+    """Selecciona una palabra de una lista de 500 palabras.
+
+    Returns:
+        str: palabra seleccionada de forma aleatoria.
+    """
     palabras = [
         "abismo", "acento", "acopio", "acuoso", "adepto", "afable", "afecto", "agotar", "ajuste", "alegre",
         "algido", "altivo", "aludido", "amaner", "amparo", "anotar", "ansias", "apilar", "apogeo", "aprove",
@@ -46,18 +51,29 @@ def selecccion_palabra():
         "visto", "viudo", "volar", "volcán", "volver", "yegua", "yermo", "yerno", "yodado", "yunta",
         "zafar", "zanja", "zapato", "zarpa", "zodíaco", "zona", "zorro"
     ]
-
-
     palabra_oculta = random.choice(palabras)
     return palabra_oculta
 
 
 def mostrar_final_juego():
+    """Instrucciones que se muestran tras finalizar un juego.
+
+    Returns:
+        int: devuelve un 1,2,o3 dependiendo de la opción seleccionada.
+    """
     print("\n═════════════════════════════════════")
     print(" Elija una opción:")
     print("   1. Volver a jugar")
     print("   2. Volver al menú principal")
     print("   3. Salir")
-    seleccion_final = int(input("👉 Tu opción: "))
+    while True:
+        try:
+            seleccion_final = int(input("👉 Tu opción: "))
+            if seleccion_final not in [1,2,3]:
+                print("\nPor favor introduzca un 1, 2 o 3.")
+            else:
+                break
+        except ValueError:
+            print("\nPor favor introduzca un 1, 2 o 3.")
     print("═════════════════════════════════════\n")
     return seleccion_final
