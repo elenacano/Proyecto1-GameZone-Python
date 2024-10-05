@@ -178,7 +178,3 @@ def inicio_tres_raya():
                     return seleccion_final
             except ValueError:
                 print("\nPor favor seleccione 1,2 o 3.")
-
-
-if __name__ == "__main__":
-    inicio_tres_raya()
