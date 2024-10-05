@@ -9,6 +9,12 @@ class jugada_tres_raya():
         self.tablero = [-1,1,2,3,4,5,6,7,8,9]
 
     def dibujar_tablero(self):
+        """
+        Dibuja el tablero en su estado actual.
+
+        Returns:
+            list: la lista donde se almacena lo que hay en cada posición del tablero.
+        """
         self.tablero[0]=-1
         print("   "+str(self.tablero[1])+"   |   "+str(self.tablero[2])+"   |   "+str(self.tablero[3])+"   ")
         print("-------------------------")
@@ -19,6 +25,11 @@ class jugada_tres_raya():
         return self.tablero
 
     def jugada_maquina(self):
+        """Genera la posición de la ficha de la máquina y la añade al tablero
+
+        Returns: 
+            None
+        """
         movimientos_posibles = []
         esquinas_disponibles=[]
         available_edges=[]
@@ -61,13 +72,14 @@ class jugada_tres_raya():
                 posicion=random.choice(available_edges)
 
         self.tablero[posicion]=self.ficha_maquina
+        return
 
     def es_ganador(self, tablero = None, ficha = None):
         """Compruba si dado un tablero y una ficha, el usuario de dicha ficha ha hecho una jugada ganadora
 
         Args:
-            tablero (list): lista de 10 elemtos con la ficha en determinadas posiciones
-            ficha (str): ficha seleccionada entra las fichas disponibles
+            tablero (list): lista de 10 elemetos que representa el tablero
+            ficha (str): ficha del jugador del cual revisamos si hay una jugada ganadora
 
         Returns:
             bool: devuelve True si hay una jugada ganadora para la ficha dada y si no False
@@ -86,22 +98,37 @@ class jugada_tres_raya():
         (tablero[3] == ficha and tablero[5] == ficha and tablero[7] == ficha)
 
     def posicion_ocupada(self, position):
+        """Comprueba si para la posición dada se puede poner ahí una ficha o esa posición ya tiene una ficha.
+
+        Args:
+            position (int): entero entre 1 y 9 cuya posición en la lista veremos si esta ocupada por una de las posibles fichas.
+
+        Returns:
+            bool: True si está ocupada la posición, False de lo contrario.
+        """
         if type(self.tablero[position]) == int:
                 return False
         return True
 
     def tablero_lleno(self):
+        """Compueba si el tablero ya tiene todas las posiciones ocupadas.
+
+        Returns:
+            bool: True si el tablero ya está lleno, False de lo contrario.
+        """
         for i in range(1,len(self.tablero)):
             if self.posicion_ocupada(i) == False:
                 return False
         return True
-
 
     def colocar_ficha(self, pos):
         self.tablero[pos]=self.ficha_jugador
 
 
 def bienvenida_tres_en_raya():
+    """
+        Imprime un bienvenida y las instrucciones del juego.
+    """
     print("\n\n╔══════════════════════════════════════════════╗")
     print("║                                              ║")
     print("║ 🎮  BIENVENIDO AL RETO DEL TRES EN RAYA  🎮  ║")
@@ -125,10 +152,15 @@ def bienvenida_tres_en_raya():
     print(" 2- La posición de la ficha de la máquina se generará automáticamente.")
     print(" 3- Se imprimirá la situación actual del tablero con la posición de su ficha y la posición seleccionada por la máquina.")
     print("--------------------------------------------------------------------------------------------------------------\n\n")
-
+    return
 
 
 def inicio_tres_raya():
+    """Inicializa el juego del tres en raya y gestiona toda la partida.
+
+    Returns:
+        int: devolverá un 2 para volver al menú principal y un 3 para salir.
+    """
 
     bienvenida_tres_en_raya()
 
