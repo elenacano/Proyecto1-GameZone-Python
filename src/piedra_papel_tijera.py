@@ -122,6 +122,10 @@ class juagada_ppt():
             else:
                 print(user_pierde)
                 self.victorias_maquina += 1
+
+        print(f'\nTus puntos: {self.victorias_jugador}')
+        print(f'Puntos de la máquina: {self.victorias_maquina}')
+        print("═════════════════════════════════════")
         return
 
     
@@ -195,6 +199,10 @@ def inicio_ppt():
             # Si estamos jugando con lagarto y spock lo añade a las opciones
             jugada.revisar_opciones_permitidas(opcion)
 
+            print("\n╔════════════════════════════════════════════════════════╗")
+            print(f"║                       {num_rondas} RONDAS                         ║")
+            print("╚════════════════════════════════════════════════════════╝")
+
             while jugada.get_rondas() != num_rondas:
                 opciones_tirada = jugada.opciones_permitidas
                 opciones_tirada_string = ', '.join(map(str, opciones_tirada))
@@ -213,10 +221,9 @@ def inicio_ppt():
                 jugada.batalla(seleccion_usuario, seleccion_maquina)
                 jugada.incrementar_rondas()
 
-            print("\n═════════════════════════════════════")
             print("\nLA PARTIDA HA TERMINADO")
-            print(f'Tus puntos: {jugada.victorias_jugador}')
-            print(f'Puntos de la máquina: {jugada.victorias_maquina}')
+            print(f'\nTus puntos: {jugada.victorias_jugador}')
+            print(f'Puntos de la máquina: {jugada.victorias_maquina}\n')
             jugada.ganador()
 
             seleccion_final = 0
