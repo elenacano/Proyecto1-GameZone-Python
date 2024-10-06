@@ -9,22 +9,51 @@ class jugada_ahorcado():
         self.letras_usadas_validas = []   
     
     def get_letras_descartadas(self):
+        """Devuelve el valor del atributo letras_descartadas.
+
+        Returns:
+            list: letras introducidas que no se encuentran en la palabra.
+        """
         return self.letras_descartadas
     
     def aniadir_letras_descartadas(self, letra):
+        """Añade una nueva letra al atributo de letras_descartadas.
+
+        Args:
+            letra (str): letra introducida por el jugador.
+
+        Returns:
+            lista: lista de las letras descartadas una vez añadida la que se ha pasado como argumento.
+        """
         return self.letras_descartadas.append(letra)
     
     def decrementar_intentos(self):
+        """Reduce en uno los intentos restantes para adivinar la palabra.
+
+        Returns:
+            int: intentos restantes actualmente.
+        """
         self.intentos -= 1
         return self.intentos
     
     def seleccion_palabra_oculta(self):
+        """Llama al archivo auxiliar para generar la palabra oculta.
+
+        Returns:
+            None
+        """
         self.palabra_original = auxiliar.selecccion_palabra()
         self.palabra = list(self.palabra_original)
         self.palabra_oculta = ['_']*len(self.palabra)
+        return
 
 
     def mostrar_dibujo_ahorcado(self):
+        """Muestra el dibujo del ahorcado correspondiente al número de rondas restantes.
+
+        Returns:
+            str: el elemento correspondiente de la lista dibujo_ahorcado.
+        """
         dibujo_ahorcado = [
             '''
             +---+
@@ -85,6 +114,11 @@ class jugada_ahorcado():
 
 
     def mostrar_estado(self):
+        """Para cada ronda muestra los intentos restantes, las lestras descartadas, la palabra oculta con las letras adivinadas y el dibujo del ahorcado actual.
+        
+        Returns:
+            None
+        """
         print("\n═════════════════════════════════════")
         print(f'     Intentos restantes: {self.intentos}')
         print(f'     Letras descartadas: {", ".join(self.letras_descartadas)}\n')
@@ -92,6 +126,14 @@ class jugada_ahorcado():
         print(self.mostrar_dibujo_ahorcado())
 
     def letra_valida(self, letra):
+        """Comprueba que la nueva letra introducida por el jugador sea una letra, no se haya introducido antes y no esté descartada ni acertada.
+
+        Args:
+            letra (str): letra introducida por el usuario.
+
+        Returns:
+            bool: True si la letra es válida y cumple todas las condiciones, False de lo contrario.
+        """
         if len(letra) != 1 :
             print('Has puesto más de una letra, inténtalo de nuevo.')
             return False
@@ -108,12 +150,26 @@ class jugada_ahorcado():
             return True
     
     def gestion_letra(self, letra):
+        """Comprueba en que posiciones de la palabra oculta está la letra introducida y desvela dichas posiciones.
+
+        Args:
+            letra (str): letra introducida por el jugador.
+
+        Returns:
+            None.
+        """
         for i in range(len(self.palabra)):
             if self.palabra[i] == letra:
                 self.palabra_oculta[i] = letra
                 self.palabra[i] = '_'
+        return
 
     def final_juego(self):
+        """Comprueba si el jugador ha ganado o perdido y muestra los mensajes correspondientes.
+
+        Resturns:
+            None.
+        """
         print("\n═════════════════════════════════════")
         if '_' not in self.palabra_oculta:
             print('\n🏆¡ENHORABUENA! ¡HAS GANADO EL JUEGO!🏆')
@@ -132,6 +188,11 @@ class jugada_ahorcado():
 
 
 def bienvenida_ahorcado():
+    """Imprime un mensaje de bienvenida al juego.
+
+    Returns:
+        None
+    """
     print("\n\n╔══════════════════════════════════════════════╗")
     print("║                                              ║")
     print("║  🔮  BIENVENIDO AL DESAFÍO DEL AHORCADO  🔮  ║")
@@ -152,6 +213,11 @@ def bienvenida_ahorcado():
 
 
 def inicio_ahorcado():
+    """Inicializa el juego del ahorcado y gestiona toda la partida.
+
+    Returns:
+        int: devolverá un 2 para volver al menú principal y un 3 para salir.
+    """
     flag = 0
     while True:
         jugada = jugada_ahorcado()

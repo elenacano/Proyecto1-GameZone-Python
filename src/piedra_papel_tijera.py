@@ -140,6 +140,9 @@ class juagada_ppt():
 
 
 def imprimir_bienvenida():
+    """
+        Imprime un bienvenida y las instrucciones del juego.
+    """
     print("\n")
     print("╔═══════════════════════════════════════════════════════╗")
     print("║        PIEDRA - PAPEL - TIJERA - LAGARTO - SPOCK      ║")
@@ -168,6 +171,11 @@ def imprimir_bienvenida():
 
 
 def inicio_ppt():
+    """Inicializa el juego del piedra, papel tijera y gestiona toda la partida.
+
+    Returns:
+        int: devolverá un 2 para volver al menú principal y un 3 para salir.
+    """
     while True:
         imprimir_bienvenida()
 
