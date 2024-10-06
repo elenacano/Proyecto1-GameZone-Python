@@ -5,7 +5,7 @@ from src import ahorcado, tres_en_raya, preguntados
 def mostrar_menu():
     print("\n\n╔══════════════════════════════════════════════╗")
     print("║                                              ║")
-    print("║  🎮  WELCOME TO MARAVILLA GAMING LOUNGE  🎮  ║")
+    print("║   🎮 BIENVENIDO AL SALÓN DE JUEGOS IRIS 🎮   ║")
     print("║                                              ║")
     print("╠══════════════════════════════════════════════╣")
     print("║                                              ║")
