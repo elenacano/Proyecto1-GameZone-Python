@@ -7,7 +7,7 @@ El objetivo es aplicar y demostrar los conocimientos de programación para const
 
 ## Descripción del Proyecto
 
-El proyecto consiste en el desarrollo de **cuatro** juegos clásicos en Python, cada uno implementado como una clase individual, que se pueden ejecutar desde un menú principal. Los juegos implementados son:
+El proyecto consiste en el desarrollo de cuatro juegos clásicos en Python, cada uno implementado como una clase individual, que se pueden ejecutar desde un menú principal. Los juegos implementados son:
 
 1. **Piedra, Papel, Tijera**: El tradicional juego de piedra, papel y tijera donde se le dará también la opción de jugar también con lagarto y spock.
 2. **Ahorcado**: El clásico juego donde el usuario tiene que adivinar una palabra antes de que se complete el dibujo de la horca.
@@ -16,7 +16,7 @@ El proyecto consiste en el desarrollo de **cuatro** juegos clásicos en Python, 
 
 Cada juego tiene sus propias reglas y características, las cuales se explican en los archivos correspondientes.
 
-### 🚀 Funcionalidades Principales
+## 🚀 Funcionalidades Principales
 
 1. **Menú de Selección**:
    - Al ejecutar `main.py`, el usuario verá un menú donde puede seleccionar entre los 4 juegos disponibles o salir.
@@ -66,7 +66,8 @@ Para instalar y ejecutar el proyecto en tu máquina local, sigue estos pasos:
    python main.py
 
 
-### 💡 Ideas Futuras
+## 💡 Ideas Futuras
+
 Algunas ideas para mejorar el proyecto en el futuro:
 
 - Añadir más juegos clásicos al salón.
