@@ -5,7 +5,7 @@
 Bienvenidos a mi primer proyecto de desarrollo de videojuegos 🎉. 
 El objetivo es aplicar y demostrar los conocimientos de programación para construir estos juegos interactivos.
 
-## Descripción del Proyecto
+## 📝​ Descripción del Proyecto
 
 El proyecto consiste en el desarrollo de cuatro juegos clásicos en Python, cada uno implementado como una clase individual, que se pueden ejecutar desde un menú principal. Los juegos implementados son:
 
@@ -33,6 +33,7 @@ Cada juego tiene sus propias reglas y características, las cuales se explican e
 4. **Opciones al Finalizar**:
 
   Una vez finalizado un juego, el usuario puede:
+
     - Volver a jugar.
     - Volver al menú principal.
     - Salir del salón de juegos.
