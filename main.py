@@ -1,5 +1,5 @@
 from src import piedra_papel_tijera as ppt
-from src import ahorcado, tres_en_raya
+from src import ahorcado, tres_en_raya, preguntados
 
 
 def mostrar_menu():
@@ -13,7 +13,7 @@ def mostrar_menu():
     print("║                                              ║")
     print("║    1️⃣  - Piedra, Papel, Tijera                ║")
     print("║    2️⃣  - Ahorcado                             ║")
-    print("║    3️⃣  - Trivial                              ║")
+    print("║    3️⃣  - Preguntados                          ║")
     print("║    4️⃣  - Tres en Raya                         ║")
     print("║    5️⃣  - Salir                                ║")
     print("║                                              ║")
@@ -32,7 +32,7 @@ def main():
             juego_seleccionado = int(input("Seleccione el número del juego al que desea jugar: "))
         
             if juego_seleccionado == 5:
-                print("Gracias por jugar con nosotros, hasta pronto.\n")
+                print("Gracias por jugar con nosotros, hasta pronto 💗​\n")
                 break
 
             elif juego_seleccionado == 1:
@@ -41,6 +41,9 @@ def main():
             elif juego_seleccionado == 2:
                 seleccion = ahorcado.inicio_ahorcado()
 
+            elif juego_seleccionado == 3:
+                seleccion = preguntados.inicio_preguntados()
+
             elif juego_seleccionado == 4:
                 seleccion = tres_en_raya.inicio_tres_raya()
 
@@ -48,7 +51,7 @@ def main():
                 print("\nPor favor ingrese un número entre 1 y 5.")
 
             if seleccion == 3:
-                    print("Gracias por jugar con nosotros, hasta pronto.\n")
+                    print("Gracias por jugar con nosotros, hasta pronto 💗​\n")
                     break
 
         except ValueError:

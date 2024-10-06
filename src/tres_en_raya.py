@@ -16,7 +16,7 @@ class jugada_tres_raya():
             list: la lista donde se almacena lo que hay en cada posición del tablero.
         """
         self.tablero[0]=-1
-        print("   "+str(self.tablero[1])+"   |   "+str(self.tablero[2])+"   |   "+str(self.tablero[3])+"   ")
+        print("\n   "+str(self.tablero[1])+"   |   "+str(self.tablero[2])+"   |   "+str(self.tablero[3])+"   ")
         print("-------------------------")
         print("   "+str(self.tablero[4])+"   |   "+str(self.tablero[5])+"   |   "+str(self.tablero[6])+"   ")
         print("-------------------------")
@@ -151,7 +151,7 @@ def bienvenida_tres_en_raya():
     print(" 1- Comienza usted introduciendo en que posición del tablero quiere poner su ficha, que es la ❌               ")
     print(" 2- La posición de la ficha de la máquina se generará automáticamente.")
     print(" 3- Se imprimirá la situación actual del tablero con la posición de su ficha y la posición seleccionada por la máquina.")
-    print("--------------------------------------------------------------------------------------------------------------\n\n")
+    print("--------------------------------------------------------------------------------------------------------------\n")
     return
 
 

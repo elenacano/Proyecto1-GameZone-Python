@@ -213,6 +213,7 @@ def inicio_ppt():
                 jugada.batalla(seleccion_usuario, seleccion_maquina)
                 jugada.incrementar_rondas()
 
+            print("\n═════════════════════════════════════")
             print("\nLA PARTIDA HA TERMINADO")
             print(f'Tus puntos: {jugada.victorias_jugador}')
             print(f'Puntos de la máquina: {jugada.victorias_maquina}')
