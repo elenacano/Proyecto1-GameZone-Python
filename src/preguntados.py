@@ -108,7 +108,7 @@ def inicio_preguntados():
 
     while True:
 
-        rondas = 2
+        rondas = 10
         jugada = jugada_preguntados()
 
         while jugada.victorias != rondas:
