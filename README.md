@@ -32,11 +32,7 @@ Cada juego tiene sus propias reglas y características, las cuales se explican e
    
 4. **Opciones al Finalizar**:
 
-  Una vez finalizado un juego, el usuario puede:
-  
-    - Volver a jugar.
-    - Volver al menú principal.
-    - Salir del salón de juegos.
+  Una vez finalizado un juego, el usuario puede: volver a jugar, volver al menú principal o salir del salón de juegos.
 
 ## 📂 Estructura del Proyecto
 
