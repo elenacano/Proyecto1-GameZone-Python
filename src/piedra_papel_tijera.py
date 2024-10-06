@@ -9,32 +9,74 @@ class juagada_ppt():
         self.victorias_maquina = 0
 
     def get_rondas(self):
+        """Devuelve el atributo rondas.
+
+        Returns:
+            int: número de rondas que se han jugado.
+        """
         return self.rondas
 
     def get_opciones_permitidas(self):
+        """Devuelve el atributo de opciones_permitidas.
+
+        Returns:
+            list: lista de las opciones permitidas.
+        """
         return self.opciones_permitidas
     
     def revisar_opciones_permitidas(self, opcion):
+        """Comprueba que modo de juego se está jugando y si es el lagarto, spock añade esas opciones a las opciones_permitidas.
+
+        Args:
+            opcion (int): un 1 si es el clásico, 2 si es con lagarto, spock.
+        """
         self.opcion_juego = opcion
         if opcion == 2:
             self.opciones_permitidas.extend(["lagarto", "spock"])
         return
     
     def incrementar_rondas(self):
+        """Aumenta las rondas jugadas.
+
+        Returns:
+            int: número de rondas jugadas.
+        """
         self.rondas += 1
         return self.rondas
     
     def comprobar_seleccion(self, seleccion_usuario):
+        """Comprueba si la seleccion del usuario está entre las opciones permitidas.
+
+        Args:
+            seleccion_usuario (str): elección que ha introducido el usuario
+
+        Returns:
+            bool: True si la elección del usuario está entre las permitidas, False de lo contrario.
+        """
         if seleccion_usuario not in self.opciones_permitidas:
             return False
         else:
             return True
         
     def generar_opcion_maquina(self):
+        """Genera de manera aleatoria la opción que va a sacar la máquina
+
+        Returns:
+            str: nombre de la opción elegida por la máquina
+        """
         return random.choice(self.opciones_permitidas)
 
 
     def batalla(self, seleccion_usuario, seleccion_maquina):
+        """Dada la selección del usuario y la de la máquina comprueba quien es el ganador o si ha habido empate y aumenta sus contadores de victorias.
+
+        Args:
+            seleccion_usuario (str): elección introducida por el usuario
+            seleccion_maquina (str): elección generada para la máquina
+
+        Returns:
+            None
+        """
         user_gana = "HAS GANADO! 🎉"
         user_pierde = "SO SORRY LOOOSER 👻​"
 
@@ -84,6 +126,8 @@ class juagada_ppt():
 
     
     def ganador(self):
+        """Muestra por pantalla quien ha sido el ganador o si ha habido empate después de jugar las rondas estipuladas.
+        """
         if self.victorias_jugador < self.victorias_maquina:
             print("HAS PERDIDO 😘​​")
 
@@ -92,6 +136,7 @@ class juagada_ppt():
         
         else:
             print("HA HABIDO UN EMPATE 💩​")
+        return
 
 
 def imprimir_bienvenida():
@@ -127,11 +172,11 @@ def inicio_ppt():
         imprimir_bienvenida()
 
         try:
-            opcion = 0
-            num_rondas = 2
+            num_rondas = 2 #CAMBIAR ESTA VARIABLE PARA JUGAR MÁS RONDAS
+            opcion = 0 # Inicializamos la variable para hacer la gestión de errorres en caso de que no introduzcan 1 o 2
             jugada = juagada_ppt()
 
-            # Le pedimo un número hasta que introduzca 1 o 2
+            # Le pedimos un número hasta que introduzca 1 o 2
             while True:
                 opcion = int(input("Seleccione la opción deseada: "))
                 if opcion != 1 and opcion !=2:
