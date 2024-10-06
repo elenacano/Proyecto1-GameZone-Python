@@ -16,15 +16,28 @@ El proyecto consiste en el desarrollo de **cuatro** juegos clásicos en Python, 
 
 Cada juego tiene sus propias reglas y características, las cuales se explican en los archivos correspondientes.
 
-## 🚀 Funcionalidades
+### Funcionalidades Principales
 
-- Selección de diferentes juegos desde un menú principal.
-- Lógica de juego optimizada con resultados aleatorios y estrategias sencillas de IA.
-- Opción de reiniciar el juego, volver al menú principal o salir del programa después de cada partida.
+1. **Menú de Selección**:
+   - Al ejecutar `main.py`, el usuario verá un menú donde puede seleccionar entre los 4 juegos disponibles o salir.
+   
+2. **Selección de Juegos**:
+   - Cada juego se ejecuta al seleccionar la opción correspondiente en el menú. El archivo de cada juego está en la carpeta `src`.
+   
+3. **Bienvenida y Reglas**:
+   - Cada juego presenta una bienvenida, explica sus reglas y comienza el juego contra la máquina.
+   
+4. **Opciones al Finalizar**:
+   - Una vez finalizado un juego, el usuario puede:
+     - Volver a jugar.
+     - Volver al menú principal.
+     - Salir del salón de juegos.
 
 ## 🛠️ Estructura del Proyecto
 
 El proyecto está organizado de la siguiente manera:
+
+- **main.py**: Archivo principal en el cual se encuentra el menú de los juegos y hace llamadas archivos individuales de cada juego dentro de la carpeta src/
 
 - **src/**: Carpeta que contiene los archivos de los juegos, cada uno programado como una clase.
   - `preguntados.py`
@@ -35,10 +48,8 @@ El proyecto está organizado de la siguiente manera:
 
 ## 🛠️ Instalación y Requisitos
 Este proyecto usa Python 3.8 y requiere las siguientes bibliotecas:
-
-- tine
+- time
 - random
-
 
 Para instalar y ejecutar el proyecto en tu máquina local, sigue estos pasos:
 
@@ -53,3 +64,12 @@ Para instalar y ejecutar el proyecto en tu máquina local, sigue estos pasos:
 2. **Ejecuta el programa**:
    ```bash
    python main.py
+
+
+### 💡 Ideas Futuras
+Algunas ideas para mejorar el proyecto en el futuro:
+
+- Añadir más juegos clásicos al salón.
+- Implementar un sistema de puntuación general como usuario del salón de juegos.
+- Hacer que los jugadores puedan competir entre sí (multijugador).
+- Añadir niveles de dificultad a los juegos.
