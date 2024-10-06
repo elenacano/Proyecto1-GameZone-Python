@@ -16,7 +16,7 @@ El proyecto consiste en el desarrollo de **cuatro** juegos clásicos en Python, 
 
 Cada juego tiene sus propias reglas y características, las cuales se explican en los archivos correspondientes.
 
-### Funcionalidades Principales
+### 🚀 Funcionalidades Principales
 
 1. **Menú de Selección**:
    - Al ejecutar `main.py`, el usuario verá un menú donde puede seleccionar entre los 4 juegos disponibles o salir.
@@ -33,7 +33,7 @@ Cada juego tiene sus propias reglas y características, las cuales se explican e
      - Volver al menú principal.
      - Salir del salón de juegos.
 
-## 🛠️ Estructura del Proyecto
+## 📂 Estructura del Proyecto
 
 El proyecto está organizado de la siguiente manera:
 
