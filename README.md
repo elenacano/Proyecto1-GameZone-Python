@@ -38,7 +38,7 @@ Cada juego tiene sus propias reglas y características, las cuales se explican e
 
 El proyecto está organizado de la siguiente manera:
 
-- **main.py**: Archivo principal en el cual se encuentra el menú de los juegos y hace llamadas archivos individuales de cada juego dentro de la carpeta src/
+- **main.py**: Archivo principal en el cual se encuentra el menú de los juegos y hace llamadas a los archivos individuales de cada juego dentro de la carpeta `src`.
 
 - **src/**: Carpeta que contiene los archivos de los juegos, cada uno programado como una clase.
   - `preguntados.py`
@@ -48,7 +48,7 @@ El proyecto está organizado de la siguiente manera:
   - `auxiliar.py`
 
 ## 🛠️ Instalación y Requisitos
-Este proyecto usa Python 3.8 y requiere las siguientes bibliotecas:
+Este proyecto usa Python 3.11 y requiere las siguientes bibliotecas:
 - time
 - random
 
