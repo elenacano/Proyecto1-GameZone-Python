@@ -2,7 +2,8 @@
 ![Descripción de la imagen](imagenes/hundirlafolta.jpeg)
 # Desarrollo de Videojuegos Clásicos en Python
 
-Bienvenidos a mi primer proyecto de desarrollo de videojuegos 🎉. El objetivo es aplicar y demostrar los conocimientos de programación para construir estos juegos interactivos.
+Bienvenidos a mi primer proyecto de desarrollo de videojuegos 🎉. 
+El objetivo es aplicar y demostrar los conocimientos de programación para construir estos juegos interactivos.
 
 ## Descripción del Proyecto
 
